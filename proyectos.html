@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos Interactivos</title>
+    <link rel="stylesheet" href="estilos/proyectos.css">
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="biblioteca.html">Biblioteca</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+        <h1>Proyectos Interactivos</h1>
+        <p>Descubre algunos de mis proyectos interactivos y las tecnologías que utilizo para desarrollarlos.</p>
+
+        <!-- Carrusel de imágenes -->
+        <section class="carousel">
+            <div class="carousel-container">
+                <div class="carousel-item">
+                    <img src="https://cdnb.ganttpro.com/uploads/2022/03/gestor-de-tareas-online-infinity.png" alt="Proyecto 1" class="carousel-image">
+                    <div class="overlay">
+                        <h2>WebApp Interactiva de Gestión de Tareas</h2>
+                        <p>Aplicación web para gestionar tareas con funcionalidades como recordatorios, filtros y un modo colaborativo en tiempo real. Usa React, Node.js y MongoDB.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://th.bing.com/th/id/R.4a3e866fea60460085794f820838dac4?rik=ipvwoutyv812ag&pid=ImgRaw&r=0&sres=1&sresct=1" alt="Proyecto 2" class="carousel-image">
+                    <div class="overlay">
+                        <h2>Plataforma de E-learning</h2>
+                        <p>Plataforma interactiva para aprender nuevos temas, con videos, cuestionarios y foros de discusión. Desarrollada con React y Firebase para la autenticación y base de datos.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/71EXCt3o%2B-L.jpg" alt="Proyecto 3" class="carousel-image">
+                    <div class="overlay">
+                        <h2>Aplicación de Clima en Tiempo Real</h2>
+                        <p>Aplicación móvil que proporciona pronósticos del clima en tiempo real usando la API de OpenWeather. Desarrollada con React Native para una experiencia multiplataforma.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://brainfoodmkt.com/wp-content/uploads/2021/07/tipos-de-paginas-web.png" alt="Proyecto 2" class="carousel-image">
+                    <div class="overlay">
+                        <h2>Pagina para crear paginas web</h2>
+                        <p>Plataforma para crear paginas web, a tu gustu y con tu diseño.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+            <!-- Lista de tecnologías -->
+    <section class="technologies">
+        <h2>Tecnologías Usadas</h2>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>MongoDB</li>
+            <li>React Native</li>
+            <li>Firebase</li>
+        </ul>
+    </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="copyright">
+            <p>&copy; <span id="date"></span>2024 - Britez Gustavo</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaciones CSS</title>
+    <style>
+        /* Reset de márgenes y paddings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Fondo y estilo general de la página */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #333;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Animación de Ciclo de Colores */
+        .color-changing-box {
+            width: 200px;
+            height: 200px;
+            margin: 50px;
+            background-color: red;
+            animation: colorCycle 3s infinite;
+        }
+
+        @keyframes colorCycle {
+            0% { background-color: red; }
+            33% { background-color: yellow; }
+            66% { background-color: blue; }
+            100% { background-color: red; }
+        }
+
+        /* Texto Rotativo */
+        .rotating-text {
+            display: inline-block;
+            font-size: 24px;
+            color: #ff6f61;
+            margin-bottom: 50px;
+            animation: rotateText 5s linear infinite;
+        }
+
+        @keyframes rotateText {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Velocidad de Animación Variable */
+        .moving-text {
+            display: inline-block;
+            font-size: 24px;
+            color: #61ff6f;
+            animation: moveText 5s ease-in-out infinite;
+        }
+
+        @keyframes moveText {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(200px); }
+            100% { transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Animación de Ciclo de Colores -->
+    <div class="color-changing-box"></div>
+
+    <!-- Texto Rotativo -->
+    <div class="rotating-text">Texto Rotando</div>
+
+    <!-- Velocidad de Animación Variable -->
+    <div class="moving-text">Texto en Movimiento</div>
+
+</body>
+</html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animación Ciclo de Colores</title>
+    <style>
+        /* Estilo general para la página */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #333;
+            margin: 0;
+        }
+
+        /* Caja con animación de cambio de color */
+        .color-changing-box {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            animation: colorCycle 3s infinite; /* Duración de 3 segundos, ciclo infinito */
+        }
+
+        /* Definición de la animación para el cambio de colores */
+        @keyframes colorCycle {
+            0% { background-color: red; }    /* Primer color: rojo */
+            33% { background-color: yellow; } /* Segundo color: amarillo */
+            66% { background-color: blue; }   /* Tercer color: azul */
+            100% { background-color: red; }   /* Vuelve al primer color: rojo */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Caja que cambia de color -->
+    <div class="color-changing-box"></div>
+
+</body>
+</html>
