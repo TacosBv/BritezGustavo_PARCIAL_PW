@@ -1,0 +1,228 @@
+/* Reset de márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Establecer imagen de fondo para todas las páginas */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://images3.alphacoders.com/134/1340832.png');
+    background-size: cover;  /* Asegura que la imagen cubra toda la pantalla */
+    background-position: center;  /* Centra la imagen */
+    background-attachment: fixed;  /* Fija la imagen de fondo cuando se hace scroll */
+    color: #fd1818;
+    line-height: 1.6;
+    min-height: 100vh;  /* Asegura que el cuerpo ocupe al menos el 100% de la altura */
+    display: flex;
+    flex-direction: column;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra negra para todo el texto */
+}
+
+/* Menú de navegación */
+header {
+    background-color: #c11b1bcd;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Sombra para los enlaces del menú */
+}
+
+header nav ul li a:hover {
+    color: #000000;
+}
+
+/* Estilo para el contenido principal */
+main {
+    padding: 80px 20px 60px;
+    text-align: center;
+    flex-grow: 1;
+    box-sizing: border-box;
+    overflow: hidden; /* Asegurar que no haya desplazamiento en el contenido principal */
+    max-width: 900px; /* Limita el ancho máximo del contenido */
+    margin: 0 auto; /* Centra el contenido */
+}
+
+/* Título principal */
+h1 {
+    font-size: 40px; /* Reducir ligeramente el tamaño del título */
+    margin-bottom: 15px;
+    color: #f60c0c;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra en el título principal */
+}
+
+/* Párrafo centrado con más espacio */
+main p {
+    font-size: 16px; /* Reducir el tamaño de la fuente del párrafo */
+    margin-bottom: 30px; /* Reducir el margen inferior */
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Sombra para el texto */
+    line-height: 1.8;
+}
+
+/* Sección de descripción de las páginas */
+.skills {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #f60c0c;
+}
+
+.skills table {
+    width: 70%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.skills th, .skills td {
+    padding: 10px;
+    border: 2px solid #fffbfb;
+    text-align: left;
+}
+
+.skills th {
+    background-color: #820808cc;
+    color: rgb(255, 255, 255);
+}
+
+.skills td {
+    background-color: #858383b9;
+    color: rgb(255, 255, 255); 
+}
+
+/* Sección de Contacto */
+.contact {
+    margin-top: 40px;
+}
+
+.contact h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #f60c0c;
+}
+
+.contact p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+/* Estilos para los iconos de redes sociales */
+.social-icons {
+    margin-bottom: 20px;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    background-color: #f60b0b;
+    border-radius: 50%;  /* Hace el icono redondo */
+    font-size: 20px;
+    width: 70px;  /* Tamaño del icono */
+    height: 70px;  /* Tamaño del icono */
+    text-align: center;
+    line-height: 40px;  /* Centra el icono dentro del círculo */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon img {
+    width: 100%;  /* Ajusta el tamaño de la imagen dentro del icono */
+    height: 100%; /* Ajusta el tamaño de la imagen dentro del icono */
+    object-fit: contain;  /* Asegura que la imagen se ajuste correctamente dentro del círculo */
+    border-radius: 50%; /* Hace la imagen redonda */
+}
+
+.social-icon:hover {
+    background-color: #f31212;
+    transform: scale(1.1);
+}
+
+.social-icon.linkedin {
+    background-color: #be0202;
+}
+
+.social-icon.github {
+    background-color: #a70000;
+}
+
+.social-icon.twitter {
+    background-color: #be0202;
+}
+
+/* Estilo del enlace de "currículum en PDF" */
+.cv-link {
+    color: #fe0000;
+    text-decoration: none;
+}
+
+.cv-link:hover {
+    color: #ff015a;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #d01515b8;
+    color: rgb(255, 255, 255);
+    padding: 5px; 
+    text-align: center;
+    position: absolute; 
+    bottom: 0;
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+    line-height: 1; 
+}
+
+footer p {
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Responsividad para pantallas más pequeñas */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+    }
+
+    .description {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .skills table {
+        width: 90%;
+    }
+}
+
+

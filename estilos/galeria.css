@@ -1,0 +1,291 @@
+/* Reset de márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Establecer imagen de fondo para todas las páginas */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://images3.alphacoders.com/134/1340832.png');
+    background-size: cover;  /* Asegura que la imagen cubra toda la pantalla */
+    background-position: center;  /* Centra la imagen */
+    background-attachment: fixed;  /* Fija la imagen de fondo cuando se hace scroll */
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;  /* Asegura que el cuerpo ocupe al menos el 100% de la altura */
+    display: flex;
+    flex-direction: column;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra negra para todo el texto */
+}
+
+/* Menú de navegación */
+header {
+    background-color: #c11b1bcd;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Sombra para los enlaces del menú */
+}
+
+header nav ul li a:hover {
+    color: #000000;
+}
+
+/* Estilo para el contenido principal */
+main {
+    padding: 120px 20px 80px;
+    text-align: center;
+    flex-grow: 1;
+    box-sizing: border-box;
+}
+
+/* Título principal */
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #f60c0c; /* Verde brillante para el título */
+}
+
+main p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: #ecf0f1; /* Blanco para el texto */
+}
+
+/* Galería de imágenes */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 0 auto;
+    width: 80%;
+}
+
+/* Contenedor de imagen */
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Efectos al pasar el ratón sobre el contenedor de la imagen */
+.image-container:hover {
+    transform: scale(1.05); /* Aumenta el tamaño del contenedor */
+}
+
+/* Estilo de las imágenes: asegura que todas tengan el mismo tamaño */
+.image {
+    width: 100%;
+    height: 250px; /* Establece una altura fija para todas las imágenes */
+    object-fit: cover; /* Asegura que la imagen se ajuste bien al tamaño sin distorsionarse */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transición suave para el hover */
+}
+
+/* Animaciones específicas para cada imagen al hacer hover */
+
+/* Animación 1: Rotación */
+.image-container:nth-child(1):hover .image {
+    animation: rotate 4s infinite linear;
+}
+
+/* Animación 2: Escala y retroceso */
+.image-container:nth-child(2):hover .image {
+    animation: scale-back 4s infinite alternate;
+}
+
+/* Animación 3: Desvanecimiento con movimiento */
+.image-container:nth-child(3):hover .image {
+    animation: fade-move 4s infinite alternate;
+}
+
+/* Animación 4: Rotación inversa con escala */
+.image-container:nth-child(4):hover .image {
+    animation: rotate-reverse-scale 5s infinite linear;
+}
+
+/* Animación 5: Flotante con movimiento vertical */
+.image-container:nth-child(5):hover .image {
+    animation: float-up-down 3s infinite alternate;
+}
+
+/* Animación 6: Zoom y desvanecimiento */
+.image-container:nth-child(6):hover .image {
+    animation: zoom-fade 4s infinite alternate;
+}
+
+/* Animación 7: Desplazamiento lateral */
+.image-container:nth-child(7):hover .image {
+    animation: slide-sideways 4s infinite alternate;
+}
+
+/* Animación 8: Oscilación de lado a lado */
+.image-container:nth-child(8):hover .image {
+    animation: swing 4s infinite ease-in-out;
+}
+
+/* Animaciones para los efectos de imagen */
+
+/* Rotación */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Escala hacia atrás */
+@keyframes scale-back {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+/* Desvanecimiento con movimiento */
+@keyframes fade-move {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Rotación inversa con escala */
+@keyframes rotate-reverse-scale {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    100% {
+        transform: rotate(-360deg) scale(1.1);
+    }
+}
+
+/* Flotante con movimiento vertical */
+@keyframes float-up-down {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Zoom y desvanecimiento */
+@keyframes zoom-fade {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Desplazamiento lateral */
+@keyframes slide-sideways {
+    0% {
+        transform: translateX(-20px);
+    }
+    100% {
+        transform: translateX(20px);
+    }
+}
+
+/* Oscilación de lado a lado */
+@keyframes swing {
+    0% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(5deg);
+    }
+}
+
+/* Overlay de texto que aparece al pasar el ratón */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* El overlay solo aparece cuando el ratón pasa sobre la imagen */
+.image-container:hover .overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Estilo de los títulos dentro del overlay */
+.overlay h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.overlay p {
+    font-size: 16px;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #d01515b8;
+    color: rgb(255, 255, 255);
+    padding: 5px; 
+    text-align: center;
+    position: absolute; 
+    bottom: 0;
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+    line-height: 1; /* Ajustar la altura de línea en el footer */
+}
+
+footer p {
+    font-size: 14px; /* Reducir aún más el tamaño de la fuente */
+    margin: 0; /* Eliminar el margen superior */ 
+}
